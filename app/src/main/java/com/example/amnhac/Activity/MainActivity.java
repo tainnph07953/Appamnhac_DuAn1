@@ -1,4 +1,4 @@
-package com.example.amnhac;
+package com.example.amnhac.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.amnhac.Fragment.Fragment_Tim_Kiem;
+import com.example.amnhac.Fragment.Fragment_Trang_Chu;
+import com.example.amnhac.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

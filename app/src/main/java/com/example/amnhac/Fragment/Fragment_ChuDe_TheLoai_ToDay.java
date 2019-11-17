@@ -1,4 +1,4 @@
-package com.example.amnhac;
+package com.example.amnhac.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,10 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Fragment_Tim_Kiem extends Fragment {
+import com.example.amnhac.R;
+
+public class Fragment_ChuDe_TheLoai_ToDay extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_tim_kiem,container,false);
+        View view = inflater.inflate(R.layout.fragment_chude_theloai_today, container, false);
+        return view;
     }
 }
