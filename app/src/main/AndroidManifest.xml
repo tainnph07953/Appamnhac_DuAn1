@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.PlayNhacActivity"></activity>
-        <activity android:name=".Activity.DanhsachtheloaitheochudeActivity" />
-        <activity android:name=".Activity.Danhsachtatcachude" />
-        <activity android:name=".Activity.DanhsachtatcaAlbumActivity" />
-        <activity android:name=".Activity.DanhsachbaihatActivity" />
-        <activity android:name=".Activity.MainActivity">
+        <activity android:name=".activity.PlayNhacActivity"></activity>
+        <activity android:name=".activity.DanhsachtheloaitheochudeActivity" />
+        <activity android:name=".activity.Danhsachtatcachude" />
+        <activity android:name=".activity.DanhsachtatcaAlbumActivity" />
+        <activity android:name=".activity.DanhsachbaihatActivity" />
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
