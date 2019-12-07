@@ -19,7 +19,6 @@ public interface Dataservice {
     @GET("chudevatheloaitrongngay.php")
     Call<Theloaitrongngay> GetCategoryMusic();
 
-
     @GET("albumhot.php")
     Call<List<Album>> GetAlbumHot();
 
@@ -29,11 +28,11 @@ public interface Dataservice {
     @FormUrlEncoded
     @POST("theloaitheochude.php")
     Call<List<TheLoai>> GetTheloaitheochude(@Field("idchude") String idchude);
-//
+
     @FormUrlEncoded
     @POST("danhsachbaihat.php")
     Call<List<Baihat>> GetDanhsachbaihattheochude(@Field("idtheloai") String idtheloai);
-//
+
     @FormUrlEncoded
     @POST("danhsachbaihat.php")
     Call<List<Baihat>> GetDanhsachbaihattheoalbum(@Field("idalbum") String idalbum);
@@ -41,6 +40,7 @@ public interface Dataservice {
     @GET("tatcaalbum.php")
     Call<List<Album>> GetTatCaAlbum();
 
-
-
+    @FormUrlEncoded
+    @POST("searchbaihat.php")
+    Call<List<Baihat>> GetSearchBaiHat(@Field("tukhoa") String tukhoa);
 }

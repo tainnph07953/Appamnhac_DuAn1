@@ -86,4 +86,6 @@ public class DanhsachtatcaAlbumActivity extends AppCompatActivity implements Alb
     public void navigateHome() {
         finish();
     }
+
 }
+

@@ -9,10 +9,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.amnhac.R;
 import com.example.amnhac.adapter.DanhsachtheloaitheochudeAdapter;
 import com.example.amnhac.model.ChuDe;
 import com.example.amnhac.model.TheLoai;
-import com.example.amnhac.R;
 import com.example.amnhac.service.APIService;
 import com.example.amnhac.service.Dataservice;
 

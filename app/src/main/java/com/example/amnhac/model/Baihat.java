@@ -25,44 +25,64 @@ public class Baihat implements Parcelable {
     @Expose
     private String linkbaihat;
 
+    protected Baihat(Parcel in) {
+        idbaihat = in.readString();
+        tenbaihat = in.readString();
+        hinhbaihat = in.readString();
+        casi = in.readString();
+        linkbaihat = in.readString();
+    }
+
+    public static final Creator<Baihat> CREATOR = new Creator<Baihat>() {
+        @Override
+        public Baihat createFromParcel(Parcel in) {
+            return new Baihat(in);
+        }
+
+        @Override
+        public Baihat[] newArray(int size) {
+            return new Baihat[size];
+        }
+    };
+
     public String getIdbaihat() {
-    return idbaihat;
+        return idbaihat;
     }
 
     public void setIdbaihat(String idbaihat) {
-    this.idbaihat = idbaihat;
+        this.idbaihat = idbaihat;
     }
 
     public String getTenbaihat() {
-    return tenbaihat;
+        return tenbaihat;
     }
 
     public void setTenbaihat(String tenbaihat) {
-    this.tenbaihat = tenbaihat;
+        this.tenbaihat = tenbaihat;
     }
 
     public String getHinhbaihat() {
-    return hinhbaihat;
+        return hinhbaihat;
     }
 
     public void setHinhbaihat(String hinhbaihat) {
-    this.hinhbaihat = hinhbaihat;
+        this.hinhbaihat = hinhbaihat;
     }
 
     public String getCasi() {
-    return casi;
+        return casi;
     }
 
     public void setCasi(String casi) {
-    this.casi = casi;
+        this.casi = casi;
     }
 
     public String getLinkbaihat() {
-    return linkbaihat;
+        return linkbaihat;
     }
 
     public void setLinkbaihat(String linkbaihat) {
-    this.linkbaihat = linkbaihat;
+        this.linkbaihat = linkbaihat;
     }
 
 
@@ -72,7 +92,11 @@ public class Baihat implements Parcelable {
     }
 
     @Override
-    public void writeToParcel(Parcel parcel, int i) {
-
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(idbaihat);
+        dest.writeString(tenbaihat);
+        dest.writeString(hinhbaihat);
+        dest.writeString(casi);
+        dest.writeString(linkbaihat);
     }
 }

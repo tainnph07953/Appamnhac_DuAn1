@@ -17,13 +17,13 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.example.amnhac.R;
 import com.example.amnhac.activity.DanhsachbaihatActivity;
 import com.example.amnhac.activity.Danhsachtatcachude;
 import com.example.amnhac.activity.DanhsachtheloaitheochudeActivity;
 import com.example.amnhac.model.ChuDe;
 import com.example.amnhac.model.TheLoai;
 import com.example.amnhac.model.Theloaitrongngay;
-import com.example.amnhac.R;
 import com.example.amnhac.service.APIService;
 import com.example.amnhac.service.Dataservice;
 import com.squareup.picasso.Picasso;
@@ -65,21 +65,14 @@ public class Fragment_ChuDe_TheLoai_ToDay extends Fragment {
             @Override
             public void onResponse(Call<Theloaitrongngay> call, Response<Theloaitrongngay> response) {
                 Theloaitrongngay theloaitrongngay = response.body();
-
                 final ArrayList<ChuDe> chuDeArrayList = new ArrayList<>();
                 chuDeArrayList.addAll(theloaitrongngay.getChuDe());
-
                 final ArrayList<TheLoai> theLoaiArrayList = new ArrayList<>();
                 theLoaiArrayList.addAll(theloaitrongngay.getTheLoai());
-
                 LinearLayout linearLayout = new LinearLayout(getActivity());
                 linearLayout.setOrientation(LinearLayout.HORIZONTAL);
-
-
-
                 LinearLayout.LayoutParams layout = new LinearLayout.LayoutParams(580, 250);
                 layout.setMargins(10, 20, 10, 30);
-
                 for (int i = 0; i < (chuDeArrayList.size()); i++) {
                     CardView cardView = new CardView(getActivity());
                     cardView.setRadius(10);
@@ -100,15 +93,12 @@ public class Fragment_ChuDe_TheLoai_ToDay extends Fragment {
                             startActivity(intent);
                         }
                     });
-
                 }
                 for (int j = 0; j < theLoaiArrayList.size(); j++) {
                     CardView cardView = new CardView(getActivity());
                     cardView.setRadius(10);
-
                     ImageView imageView = new ImageView(getActivity());
                     imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-
                     if (theLoaiArrayList.get(j).getHinhTheLoai() != null) {
                         Picasso.with(getActivity()).load(theLoaiArrayList.get(j).getHinhTheLoai()).into(imageView);
                     }
@@ -124,15 +114,15 @@ public class Fragment_ChuDe_TheLoai_ToDay extends Fragment {
                             startActivity(intent);
                         }
                     });
-
                 }
                 horizontalScrollView.addView(linearLayout);
             }
-
             @Override
             public void onFailure(Call<Theloaitrongngay> call, Throwable t) {
 
             }
         });
     }
+
+
 }

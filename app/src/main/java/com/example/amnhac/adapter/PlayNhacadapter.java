@@ -1,26 +1,21 @@
 package com.example.amnhac.adapter;
 
 import android.content.Context;
-import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.amnhac.model.Baihat;
 import com.example.amnhac.R;
+import com.example.amnhac.model.Baihat;
 
 import java.util.ArrayList;
 
 public class PlayNhacadapter extends RecyclerView.Adapter<PlayNhacadapter.ViewHolder> {
     Context context;
     ArrayList<Baihat> mangbaihat;
-    Toolbar toolbar;
-    MediaPlayer mediaPlayer;
-
     public PlayNhacadapter(Context context, ArrayList<Baihat> mangbaihat) {
         this.context = context;
         this.mangbaihat = mangbaihat;
