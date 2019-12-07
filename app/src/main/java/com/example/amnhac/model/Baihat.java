@@ -45,6 +45,20 @@ public class Baihat implements Parcelable {
         }
     };
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(idbaihat);
+        dest.writeString(tenbaihat);
+        dest.writeString(hinhbaihat);
+        dest.writeString(casi);
+        dest.writeString(linkbaihat);
+    }
+
     public String getIdbaihat() {
         return idbaihat;
     }
@@ -86,17 +100,5 @@ public class Baihat implements Parcelable {
     }
 
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(idbaihat);
-        dest.writeString(tenbaihat);
-        dest.writeString(hinhbaihat);
-        dest.writeString(casi);
-        dest.writeString(linkbaihat);
-    }
 }

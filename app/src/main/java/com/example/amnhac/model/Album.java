@@ -39,6 +39,18 @@ public class Album implements Parcelable {
             return new Album[size];
         }
     };
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(idAlbum);
+        dest.writeString(tenAlbum);
+        dest.writeString(tencasiAlbum);
+        dest.writeString(hinhanhAlbum);
+    }
 
     public String getIdAlbum() {
         return idAlbum;
@@ -72,17 +84,6 @@ public class Album implements Parcelable {
         this.hinhanhAlbum = hinhanhAlbum;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(idAlbum);
-        dest.writeString(tenAlbum);
-        dest.writeString(tencasiAlbum);
-        dest.writeString(hinhanhAlbum);
-    }
 
 }

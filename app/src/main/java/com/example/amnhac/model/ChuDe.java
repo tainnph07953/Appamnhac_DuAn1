@@ -35,7 +35,17 @@ public class ChuDe implements Parcelable{
             return new ChuDe[size];
         }
     };
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(idChuDe);
+        dest.writeString(tenChuDe);
+        dest.writeString(hinhChuDe);
+    }
     public String getIdChuDe() {
         return idChuDe;
     }
@@ -60,16 +70,5 @@ public class ChuDe implements Parcelable{
         this.hinhChuDe = hinhChuDe;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(idChuDe);
-        dest.writeString(tenChuDe);
-        dest.writeString(hinhChuDe);
-    }
 
 }

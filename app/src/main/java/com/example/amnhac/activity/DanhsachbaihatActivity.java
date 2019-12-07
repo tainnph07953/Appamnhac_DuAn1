@@ -68,8 +68,6 @@ public class DanhsachbaihatActivity extends AppCompatActivity  {
             GetDataAlbum(album.getIdAlbum());
         }
 
-
-
     }
 
     private void setValueInView(String ten,String hinh) {

@@ -39,7 +39,18 @@ public class TheLoai implements Parcelable{
             return new TheLoai[size];
         }
     };
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(idTheLoai);
+        dest.writeString(idKeyChuDe);
+        dest.writeString(tenTheLoai);
+        dest.writeString(hinhTheLoai);
+    }
     public String getIdTheLoai() {
     return idTheLoai;
     }
@@ -72,16 +83,5 @@ public class TheLoai implements Parcelable{
     this.hinhTheLoai = hinhTheLoai;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(idTheLoai);
-        dest.writeString(idKeyChuDe);
-        dest.writeString(tenTheLoai);
-        dest.writeString(hinhTheLoai);
-    }
 }

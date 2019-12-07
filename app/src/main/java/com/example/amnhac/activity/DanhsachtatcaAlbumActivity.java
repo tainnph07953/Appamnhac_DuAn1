@@ -39,7 +39,6 @@ public class DanhsachtatcaAlbumActivity extends AppCompatActivity implements Alb
     private void init() {
         recyclerViewAllAlbum = findViewById(R.id.recyclerViewAllAlbum);
         toolbarAllAlbum = findViewById(R.id.toolbarallAlbum);
-
         setSupportActionBar(toolbarAllAlbum);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Tất Cả Các Album");
@@ -50,8 +49,6 @@ public class DanhsachtatcaAlbumActivity extends AppCompatActivity implements Alb
             }
         });
     }
-
-
     private void GetData() {
         Dataservice dataservice = APIService.getService();
         Call<List<Album>> listCall = dataservice.GetTatCaAlbum();
