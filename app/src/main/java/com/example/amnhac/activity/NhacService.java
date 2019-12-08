@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 
-public class HelloService extends Service {
-    private static final String TAG = "HelloService";
+public class NhacService extends Service {
+    private static final String TAG = "NhacService";
 
     private boolean isRunning  = false;
 
@@ -21,15 +21,10 @@ public class HelloService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         Log.i(TAG, "Service onStartCommand");
-
-        //Creating new thread for my service
-        //Always write your long running tasks in a separate thread, to avoid ANR
         new Thread(new Runnable() {
             @Override
             public void run() {
 
-                //Your logic that service will perform will be placed here
-                //In this example we are just looping and waits for 1000 milliseconds in each loop.
                 for (int i = 0; i < 5; i++) {
                     try {
                         Thread.sleep(1000);
@@ -41,7 +36,6 @@ public class HelloService extends Service {
                     }
                 }
 
-                //Stop service once it finishes its task
                 stopSelf();
             }
         }).start();
