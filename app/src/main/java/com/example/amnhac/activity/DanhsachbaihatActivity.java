@@ -169,6 +169,7 @@ public class DanhsachbaihatActivity extends AppCompatActivity  {
         recyclerViewdanhsachcakhuc = findViewById(R.id.recyclerViewdanhsachbaihat);
     }
 
+    
     public void DataIntent() {
         Intent intent = getIntent();
         if (intent != null) {
