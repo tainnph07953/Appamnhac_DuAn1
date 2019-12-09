@@ -65,8 +65,8 @@ public class Fragment_Tim_Kiem extends Fragment {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-
-                return false;
+                SearchTuKhoaBaiHat(newText);
+                return true;
             }
         });
         super.onCreateOptionsMenu(menu, inflater);

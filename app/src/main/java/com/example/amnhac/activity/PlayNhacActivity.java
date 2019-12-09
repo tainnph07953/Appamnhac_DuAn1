@@ -40,7 +40,6 @@ public class PlayNhacActivity extends AppCompatActivity {
     Fragment_Dia_Nhac fragment_dia_nhac;
     Fragment_Play_Danh_Sach_Cac_Bai_Hat fragment_play_danh_sach_cac_bai_hat;
     int position = 0;
-    String giatri = "";
     MediaPlayer mediaPlayer = new MediaPlayer();
     boolean repeat = false;
     boolean checkrandom = false;
@@ -287,7 +286,8 @@ public class PlayNhacActivity extends AppCompatActivity {
         }
 
     }
-    class PlayMp3 extends AsyncTask<String,Void,String>{
+
+    class PlayMp3 extends AsyncTask<String,Void,String> {
 
         @Override
         protected String doInBackground(String... strings) {
@@ -298,17 +298,17 @@ public class PlayNhacActivity extends AppCompatActivity {
         protected void onPostExecute(String baihat) {
             super.onPostExecute(baihat);
             try {
-            mediaPlayer  = new MediaPlayer();
-            mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mediaPlayer) {
-                    mediaPlayer.stop();
-                    mediaPlayer.reset();
-                }
-            });
-            mediaPlayer.setDataSource(baihat);
-            mediaPlayer.prepare();
+                mediaPlayer = new MediaPlayer();
+                mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mediaPlayer.stop();
+                        mediaPlayer.reset();
+                    }
+                });
+                mediaPlayer.setDataSource(baihat);
+                mediaPlayer.prepare();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -317,13 +317,16 @@ public class PlayNhacActivity extends AppCompatActivity {
             UpdateTime();
 
         }
+    }
+
         private void TimeSong() {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:ss");
             txtTotalTime.setText(simpleDateFormat.format(mediaPlayer.getDuration()));
             sktime.setMax(mediaPlayer.getDuration());
         }
 
-    }
+
+
     private void UpdateTime(){
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -349,6 +352,7 @@ public class PlayNhacActivity extends AppCompatActivity {
                 }
             }
         },300);
+
         final Handler handler1 = new Handler();
         handler1.postDelayed(new Runnable() {
             @Override
