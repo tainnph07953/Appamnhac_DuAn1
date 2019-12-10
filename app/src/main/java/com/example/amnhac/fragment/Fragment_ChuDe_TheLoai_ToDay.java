@@ -69,6 +69,7 @@ public class Fragment_ChuDe_TheLoai_ToDay extends Fragment {
                 chuDeArrayList.addAll(theloaitrongngay.getChuDe());
                 final ArrayList<TheLoai> theLoaiArrayList = new ArrayList<>();
                 theLoaiArrayList.addAll(theloaitrongngay.getTheLoai());
+//                LinearLayout linearLayout = new LinearLayout(getActivity());
                 LinearLayout linearLayout = new LinearLayout(getActivity());
                 linearLayout.setOrientation(LinearLayout.HORIZONTAL);
                 LinearLayout.LayoutParams layout = new LinearLayout.LayoutParams(580, 250);
