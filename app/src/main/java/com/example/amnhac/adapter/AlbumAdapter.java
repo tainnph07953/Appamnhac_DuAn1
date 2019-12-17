@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.amnhac.R;
 import com.example.amnhac.activity.DanhsachbaihatActivity;
 import com.example.amnhac.model.Album;
-import com.example.amnhac.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

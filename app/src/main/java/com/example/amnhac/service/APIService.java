@@ -1,9 +1,5 @@
 package com.example.amnhac.service;
 
-/**
- * Created by KhoaPhamPC on 4/12/2017.
- */
-
 public class APIService {
 
     private static final String Base_URL = "https://appnghenhacc.000webhostapp.com/Server/";
